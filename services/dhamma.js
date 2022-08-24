@@ -1,19 +1,23 @@
 const db = require('../services/db');
 const config = require('../config');
 
-// page = 1
-function getList() {
-    //   const offset = (page - 1) * config.listPerPage;
-    // SELECT * FROM tbl_category LIMIT ?,?`, [offset, config.listPerPage]
+function getCategoryList() {
     const data = db.query(`SELECT * FROM tbl_category`,[]);
-    //   const meta = {page};
-
-    //   return {
-    //     data,
-    //     meta
-    //   }
-
     return { data }
+}
+
+function getCategory(id) {
+    const data = db.query(`SELECT * FROM tbl_category where id =? `,[id]);
+    const meta = {id};
+    return { data, meta }
+}
+
+
+function getDhammaByPage(page) {
+    const offset = (page - 1) * config.listPerPage;
+    const data = db.query(`SELECT * FROM tbl_dhamma order by id LIMIT ?,?`,[offset, config.listPerPage]);
+    const meta = {page};
+    return { data, meta }
 }
 
 function getDhammaList(category_id) {
@@ -25,6 +29,15 @@ function getDhammaList(category_id) {
     }
 }
 
+function getDhamma(id) {
+    const data = db.query(`select * from tbl_dhamma where id=?`, [id])
+    const meta = {id};
+    return {
+        data,
+        meta    
+    }
+}
+
 module.exports = {
-    getList, getDhammaList
+    getCategoryList, getCategory, getDhammaList, getDhamma, getDhammaByPage
 }

@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3001 || process.env.PORT;
 const dhammaRouter = require('./routes/dhamma');
+const categoryRouter = require('./routes/category');
 
 app.use(express.json());
 
@@ -10,6 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/dhamma', dhammaRouter);
+app.use('/categories', categoryRouter);
 
 const server = app.listen(process.env.PORT || 5000, () => {
   const port = server.address().port;

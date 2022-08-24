@@ -8,7 +8,7 @@ function query(sql, params) {
 
 function run(sql, params) {
     return db.prepare(sql).run(params);
-  }
+}
 
 module.exports = {
   query
