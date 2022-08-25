@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
+var cors = require('cors')
 const port = 3001 || process.env.PORT;
 const dhammaRouter = require('./routes/dhamma');
 const categoryRouter = require('./routes/category');
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.json({message: 'alive'});
