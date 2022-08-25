@@ -21,7 +21,11 @@ Nodejs + SQLite
 <h1>Dhamma</h1>
 
 <h3>Dhamma List By Category</h3>
-```/dhamma/category/:id```
+````
+```
+/dhamma/category/:id
+````
+```
 <a href="https://dhammapada-api.herokuapp.com/dhamma/category/1" target="_blank">https://dhammapada-api.herokuapp.com/dhamma/category/1</a>
 
 <h3>Dhamma By ID</h3>
