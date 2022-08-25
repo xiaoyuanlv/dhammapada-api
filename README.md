@@ -21,7 +21,7 @@ Nodejs + SQLite
 <h1>Dhamma</h1>
 
 <h3>Dhamma List By Category</h3>
-<p>/dhamma/category/:id</p>
+```/dhamma/category/:id```
 <a href="https://dhammapada-api.herokuapp.com/dhamma/category/1" target="_blank">https://dhammapada-api.herokuapp.com/dhamma/category/1</a>
 
 <h3>Dhamma By ID</h3>
@@ -32,5 +32,13 @@ Nodejs + SQLite
 <p>/dhamma?page=1</p>
 <a href="https://dhammapada-api.herokuapp.com/dhamma?page=1" target="_blank">https://dhammapada-api.herokuapp.com/dhamma?page=1</a>
 
+<hr/>
 
+<h1>Find this library useful?</h1>
+<p>Support by joining stargazers for the repository. ⭐ </p>
+
+<hr/>
+<h1>License</h1>
+<p>
+</p>
 
