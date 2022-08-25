@@ -5,7 +5,7 @@ Nodejs + SQLite
 
 <p>Here are the list</p>
 
-<h1>Main API URL</h1>
+<h1>Base API URL</h1>
 <a href="https://dhammapada-api.herokuapp.com/" target="_blank">https://dhammapada-api.herokuapp.com</a>
 
 <h1>Categories</h1>
