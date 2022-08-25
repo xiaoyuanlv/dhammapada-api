@@ -34,7 +34,7 @@ Nodejs + SQLite
 
 <hr/>
 
-<h1>Find this library useful?</h1>
+<h1>Find this API useful?</h1>
 <p>Support by joining stargazers for the repository. ⭐ </p>
 
 
