@@ -15,7 +15,8 @@ app.get('/', (req, res) => {
 app.use('/dhamma', dhammaRouter);
 app.use('/categories', categoryRouter);
 
-const server = app.listen(process.env.PORT || 5000, () => {
+//process.env.PORT || 5000
+const server = app.listen(80, () => {
   const port = server.address().port;
   console.log(`Express is working on port ${port}`);
 });
