@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 var cors = require('cors')
-const port = 3001 || process.env.PORT;
+const port = process.env.PORT || 3030;
 const dhammaRouter = require('./routes/dhamma');
 const categoryRouter = require('./routes/category');
 
@@ -16,7 +16,7 @@ app.use('/dhamma', dhammaRouter);
 app.use('/categories', categoryRouter);
 
 //process.env.PORT || 5000
-const server = app.listen(80, () => {
+const server = app.listen(port, () => {
   const port = server.address().port;
   console.log(`Express is working on port ${port}`);
 });
